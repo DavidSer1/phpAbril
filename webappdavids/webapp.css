@@ -1,0 +1,139 @@
+* {
+  font-family: "Noto Serif", serif;
+  color: #596B7D;
+}
+
+.fondo {
+  background-color: #ff7f50;
+}
+.fondotrnsportistes {
+  background-color: #b9bbbd;
+  color: #222831;
+}
+.fondonav {
+  background-color: #222831;
+}
+.usuaris {
+  background-color: #30475e;
+}
+.usuaris:hover {
+  color: #374A78 !important;
+background-color: #F8F9FA;
+}
+.logo {
+  width: 12.6rem;
+}
+.bordetransportistas {
+  color: #2c3f52 !important;
+}
+.fondo2 {
+  background-color: #ececec;
+}
+.fondobotons {
+  background-color: #ff7000;
+}
+.accions {
+  background-color: #6c757d;
+}
+.fondo3 {
+  background-color: white;
+}
+.bordesopcio {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.bordeaplicar {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.bordegrupbotons {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.custom-fw {
+  font-size: 1rem;
+}
+.lletra {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.fondohead {
+  background-color: #e2e3e5;
+}
+.tancar {
+  background-color: #a52a2a;
+}
+.tancar:hover {
+  color: #374A78 !important;
+  background-color: #F8F9FA;
+}
+
+@media (max-width: 991px) {
+
+  #menuNav {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute; 
+    top: 0;
+
+    width: 100%; 
+    background-color: #333; 
+    z-index: 1000;
+  }
+
+  #menuNav.menu-expanded {
+    visibility: visible;
+    opacity: 1;
+    left: 0; 
+  }
+
+  #menuToggle {
+    z-index: 2100; 
+  
+    border: none;
+    cursor: pointer; 
+    left: 743px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 5rem;
+  }
+  .lletra {
+    font-weight: 700;
+    font-size: 23px;
+  }
+  th {
+    display: none;
+  }
+
+  td {
+    display: block;
+  }
+
+  td::before {
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  td[data-no-colon="true"]::before {
+    content: "";
+  }
+}
+@media screen and (max-width: 500px) {
+  #menuToggle {
+    left: 402px;
+    top: 23px;
+    border: none;
+    cursor: pointer; 
+  }
+  .lletra {
+    font-weight: 700;
+    font-size: 22px;
+  }
+}

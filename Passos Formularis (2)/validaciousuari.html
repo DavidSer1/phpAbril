@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> .error {
+        border:solid 2px #FF0000; 
+}
+ </style>
+</head>
+<body>
+
+    <form action="procesar.php" method="post" id="elFormulari"> 
+
+    <label for="nom">Nom:</label>
+    <input type="text" name="nom" id="nom" maxlength="30" pattern="[A-Za-z\s]{2,30}" title="Introdueix entre 2 i 30 lletres" required/>
+    
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" name="apellidos" id="apellidos" maxlength="15" pattern="[A-Za-z\s]{2,30}" title="Introdueix entre 2 i 30 lletres" required/>
+    
+    <label for="nie">NIF:</label>
+    <input type="text" name="nom" id="nie" maxlength="15" pattern="[A-Za-z\s]{2,15}" title="Introdueix entre 2 i 15 lletres" />
+    
+    <label for="email">Correo electrónico:</label>
+    <input  type="text" id="email" maxlength="15"  name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+" required
+    >
+    <label for="correu2"> Repetición Correo  electronico</label>
+    <input type="text" name="correu" id="correu2" maxlength="15" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+" title="Introdueix entre 6 i 15 lletres" required/>
+
+    <label for="nick">Nick:</label>
+    <input type="text" name="nick" id="nick" maxlength="8" pattern="[A-Za-z\s]{2,8}" title="Introdueix entre 2 i 8 lletres" required/>
+
+    <label for="contra">Contrasenya:</label>
+    <input type="password" name="contra" id="contra" maxlength="15" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{6,15}$" title="Introdueix entre 2 i 15 lletres" required/>
+   
+    <label for="contra2">Repetición Contrasenya:</label>
+    <input type="password" name="contra2" id="contra2" maxlength="15" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{6,15}$" title="Introdueix entre 2 i 15 lletres" required/>
+
+<label for="captcha">Captcha</label>
+<input type="text" name="captcha" id="captcha" maxlength="2"  title="Introdueix 1 numero " required/>
+
+<p id="numeroscaptcha"></p>
+
+    <input type="submit" name="enviar" id="enviar" value="Enviar"/>
+</form>
+    <p id="missatgeError"></p>
+    <script type="text/javascript" src="./validaciousuari.js"  defer></script>
+
+</body>
+</html>
