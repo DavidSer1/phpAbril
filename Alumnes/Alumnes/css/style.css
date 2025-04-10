@@ -1,0 +1,43 @@
+html {
+  background: url(../img/wallpaper.jpg) center center / cover no-repeat fixed;
+  overflow: hidden;
+}
+
+#cotxe {
+  position: absolute;
+  background-image: url(../img/cotxe.png);
+  left: 0;
+  top: 700px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+}
+
+#semafor {
+  position: absolute;
+  background-image: url(../img/semafor.png);
+  left: 1500px;
+  top: 775px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+}
+
+#policia {
+  position: absolute;
+  background-image: url(../img/police-stop.png);
+  left: 1000px;
+  top: 600px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 50%;
+  width: 50%;
+  display: none;
+  transition: transform 4s;
+}
+
+.policiaExir {
+  transform: rotate(180deg) scale(1.5, 1.5);
+}

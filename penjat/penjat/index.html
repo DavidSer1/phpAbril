@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Penjat</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+    #penjat {
+      margin: 15px;
+      height: 200px;
+      position: relative;
+    }
+    
+    .error-img {
+      position: absolute;
+      width: 136px;
+      height: 128px;
+      background: url('img/el-ahorcado.jpg') no-repeat;
+      display: none; 
+    }
+
+    .error1 { left: 0px; background-position: -45px -44px; }
+    .error2 { left: 0px; background-position: -224px -44px; }
+    .error3 { left: 0px; background-position: -403px -44px; }
+    .error4 { left: 0px; background-position: -45px -227px; }
+    .error5 { left: 0px; background-position: -224px -227px; }
+    .error6 { left: 0px; background-position: -403px -227px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>El Penjat</h1>
+    <button id="inici" class="btn btn-primary">Nou Joc</button>
+
+    <div id="penjat">
+      <div class="error-img error1"></div>
+      <div class="error-img error2"></div>
+      <div class="error-img error3"></div>
+      <div class="error-img error4"></div>
+      <div class="error-img error5"></div>
+      <div class="error-img error6"></div>
+    </div>
+
+    <div id="paraulaDescobrir" class="center"></div>
+
+    <div class="form-row align-items-center">
+      <div class="col-auto my-1">
+        <input type="text" maxlength="1" id="caracter">
+      </div>
+      <div class="col-auto my-1">
+        <button id="comprova" class="btn btn-primary">Comprova</button>
+      </div>
+    </div>
+
+    <div id="error" class="center">Errors: </div>
+  </div>
+
+  <script src="./index.js"></script>
+   
+</body>
+</html>
