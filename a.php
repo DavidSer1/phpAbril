@@ -1,1 +1,3 @@
-ffff
+<?php 
+ddududu
+?>
