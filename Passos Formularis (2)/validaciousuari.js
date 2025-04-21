@@ -4,12 +4,19 @@ window.onload = iniciar;
 function iniciar (){
     document.getElementById("enviar").addEventListener("click", validar,false);
     mostrarnumerosCaptcha();
+    separacio();
 
 } 
 var element3 = document.getElementById("numeroscaptcha");
 let numero1 =  Math.floor(Math.random() * 10);
 let numero2 =  Math.floor(Math.random() * 10);
 let resultado = numero1 + numero2;
+const elemento = document.querySelector('.r');
+
+function separacio(){
+elemento.innerHTML= "<br>";
+}
+
 
 function validarNom () {
     var element = document.getElementById("nom");
@@ -116,26 +123,29 @@ function mostrarnumerosCaptcha(){
     element3.innerHTML = numero1 + " + " + numero2;
 
 
- 
 
 }
 
-function validarCaptcha(){
+function validarCaptcha() {
     var element = document.getElementById("captcha");
 
-    if (!element.checkValidity()){
-        if (element.validity.valueMissing){
-            error(element,"Deus d'introduïr un numero");
-        }
-        if(resultado != element.value){
-            error(element, "El resultat es incorrecte.");
-           
+    // Validar si está vacío
+    if (!element.checkValidity()) {
+        if (element.validity.valueMissing) {
+            error(element, "Deus d'introduïr un numero");
         }
         return false;
-
     }
+
+    // Validar si el resultado es incorrecto
+    if (parseInt(element.value) !== resultado) {
+        error(element, "El resultat es incorrecte.");
+        return false;
+    }
+
     return true;
 }
+
 
 function validar (e) {
     esborrarError ();
