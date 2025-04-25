@@ -24,13 +24,22 @@
   width: 10rem;
 
 }
-@media (max-width: 1200px) {
+@media (max-width: 1201px) {
   .ab{
     height: 30.3rem;
+  }
+  .imagen2{
+    height: 27.4rem;
   }
   .imatgeheader {
     width: 12.9rem;
   }
+  .imagencaso3{
+    height: 18.6rem;
+ 
+  }
+  
+
 }
 
 
@@ -85,5 +94,12 @@
   .imatgeheader {
     width: 6.2rem;
   }
+  .ab{
+    height: 33.4rem;
+  }
+  .imagen2{
+    height: 30.3rem;
+  }
+
 }
 
