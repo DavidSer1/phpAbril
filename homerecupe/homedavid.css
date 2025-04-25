@@ -26,7 +26,7 @@
 }
 @media (max-width: 1200px) {
   .ab{
-    height: 0rem;
+    height: 30.3rem;
   }
   .imatgeheader {
     width: 12.9rem;
@@ -50,7 +50,12 @@
     height: 13.2rem;
   }
 }
-@media (min-width: 750px) {
+@media (max-width: 750px) {
+  .ab{
+    height: 46.0rem;
+  }
+}
+@media (max-width: 750px) {
   .ww{
     width: 13.3rem;
     height: 13.2rem;
@@ -61,22 +66,22 @@
   .imatgeheader {
     width: 6.2rem;
   }
-  .ab{
-    height: 46.2rem;
-  }
+
   .ww{
     width: 21.9rem;
     height: 21.5rem;
   }
   .imagencaso3{
-    height: 15.5rem;
+    height: 14.6rem;
     width: 23.3rem;
   }
-  .imagencaso4{
-
+  .imagencaso3{
+    height: 14.3rem;
+    width: 23.3rem;
   }
+
 }
-@media (min-width: 550px) {
+@media (max-width: 550px) {
   .imatgeheader {
     width: 6.2rem;
   }
