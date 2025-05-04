@@ -16,9 +16,7 @@
         return $this->nombre;
     }
 
-    public function setNombre($nombre) {
-        $this->nombre = $nombre;
-    }
+  
 
     abstract public function getPrecio();
 

@@ -26,9 +26,7 @@ class Juego extends Producto {
         return $this->genero;
     }
 
-    public function setGenero($genero) {
-        $this->genero = $genero;
-    }
+
 
     public function __toString() {
         return parent::__toString() . " - Plataforma: $this->plataforma - Género: $this->genero";

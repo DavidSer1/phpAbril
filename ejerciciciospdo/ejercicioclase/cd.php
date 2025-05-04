@@ -27,9 +27,7 @@ class CD extends Producto {
         return $this->genero;
     }
 
-    public function setGenero($genero) {
-        $this->genero = $genero;
-    }
+
 
     public function __toString() {
         return parent::__toString() . " - Duración: $this->duracion min - Género: $this->genero";
