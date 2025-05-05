@@ -3,7 +3,7 @@
 include "funciones.php";
 
 $conexion = obtenerconexion(); 
-$dni = "5555555F";
+$dni = "5555553F";
 $nombre = "Juan";
 $direccion = "Pérez";
 $localidad = "Oliva";
