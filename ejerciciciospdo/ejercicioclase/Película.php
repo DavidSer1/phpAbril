@@ -1,5 +1,6 @@
 <?php
 include "Producto.php";
+
 class Pelicula extends Producto {
     private $idioma;
     private $duracion;
@@ -20,28 +21,17 @@ class Pelicula extends Producto {
         return $this->idioma;
     }
 
-    public function setIdioma($idioma) {
-        $this->idioma = $idioma;
-    }
-
     public function getDuracion() {
         return $this->duracion;
-    }
-
-
-    public function setDuracion($duracion) {
-        $this->duracion = $duracion;
     }
 
     public function getGenero() {
         return $this->genero;
     }
 
-    public function setGenero($genero) {
-        $this->genero = $genero;
-    }
 
     public function __toString() {
         return parent::__toString() . " - Idioma: $this->idioma - Duración: $this->duracion min - Género: $this->genero";
     }
+
 }
