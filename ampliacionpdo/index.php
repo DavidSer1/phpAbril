@@ -28,8 +28,18 @@ if (count($clientes) > 0): ?>
                     <td><?php echo $cliente->provincia; ?></td>
                     <td><?php echo $cliente->telefono; ?></td>
                     <td><?php echo $cliente->email; ?></td>
-                    <td><?php  echo " <a href=borrarcliente.php> <button>Eliminar</button> </a>"; ?></td>
-                    <td><?php   echo " <a href=editarcliente.php?$cliente->dni> <button>Modificar</button> </a>"; ?></td>
+<td>
+    <a href="borrarcliente.php?dni=<?php echo $cliente->dni; ?>">
+        <button>Eliminar</button>
+    </a>
+</td>
+<td>
+    <a href="editarcliente.php?dnis=<?php echo $cliente->dni; ?>">
+        <button>Modificar</button>
+    </a>
+</td>
+
+                  
                   
                 </tr>
             <?php endforeach; ?>

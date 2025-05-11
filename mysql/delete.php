@@ -9,6 +9,7 @@ $rows = $valor->execute(array(':dni' => $dni));
 
 if($rows > 0){
     echo "Borrado correctamente";
+      header("Location: index.php");
 }
 
 ?>

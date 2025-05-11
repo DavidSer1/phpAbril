@@ -1,7 +1,38 @@
 <?php 
+include 'funciones.php'; 
+$conexion =  obtenerconexion();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$dni= $_POST['dni'];
+$nombre= $_POST['nombre'];
+$direccion= $_POST['direccion'];
+$localidad= $_POST['localidad'];
+$provincia= $_POST['provincia'];
+$telefono= $_POST['telefono'];
+$email= $_POST['email'];
+
+
+$consultas = $conexion->prepare("INSERT INTO clientes (dni, nombre, direccion, localidad, provincia, telefono, email) VALUES (:dni, :nombre, :direccion, :localidad, :provincia, :telefono, :email)");
+
+$rows = $consultas->execute(array(
+    ":dni" => $dni,
+    ":nombre" => $nombre,
+    ":direccion" => $direccion,
+    ":localidad" => $localidad,
+    ":provincia" => $provincia,
+    ":telefono" => $telefono,
+    ":email" => $email
+));
+
+if($rows == 1){
+    echo "Se ha insertado correctamente";
+    header("Location: index.php");
+}else{
+    echo "No se ha insertado correctamente";
+}
+}
 
 ?>
-  <form>
+  <form action="clientenuevo.php" method="POST">
     <div>
       <label for="dni">DNI:</label><br>
       <input type="text" id="dni" name="dni" maxlength="9" required>
