@@ -26,15 +26,17 @@
 </head>
 <body>
 
-<div class="container-xl pt-5 mt-5">
+<div class="container-xl container  pt-5 mt-5">
 
-<div class="row p-0 mt-lg-1 mt-xxl-5 pt-lg-0 pt-xxl-1">
+<div class="row p-0 mt-lg-1 mt-xxl-5  pt-xs-5 pt-lg-0 pt-md-5 mt-md-5 pt-xxl-1">
+  <div class="pt-md-5 pt-lg-0 mt-md-1 mt-sm-5 mt-lg-0"></div>
 <div class="col-md-2"></div>
-<div class="col-md-8 px-lg-0 px-xxl-1"> 
+<div class="col-md-8 col-sm-12 px-lg-0 px-xxl-1 px-md-4 paddingxs" > 
 <div class="card mb-3" >
   <div class="row g-0">
-    <div class="col-xl-7 col-md-0">
-      <img src="./img/lateral2.jpg" class="h-100 img-fluid rounded-2" alt="...">
+    <div class="col-xl-7 col-md-0 col-xs-0">
+     <img src="./img/lateral2.jpg" class="h-100 img-fluid rounded-2 d-none d-lg-block" alt="...">
+
     </div>
     <div class="col-xl-5 col-md-12">
       <div class="card-body p-0">
@@ -45,8 +47,8 @@
      
         <div class="col-md-1"></div>
        
-  <div class="col-md-10 ">
-    <label for="validationCustom01" class="form-label mt-lg-1 mt-xxl-2 ms-lg-2 ms-xxl-1 ps-1">Login</label>
+  <div class="col-md-10 px-md-0 px-sm-5   px-lg-2 ">
+    <label for="validationCustom01" class="form-label mt-lg-1 mt-sm-0 ms-md-2 mt-xxl-2 ms-lg-2 ms-xxl-1 ps-1 mt-md-2">Login</label>
     <input type="text" class="form-control  " id="validationCustom01"  required>
     <div class="valid-feedback">
       Looks good!
@@ -54,28 +56,40 @@
   </div>
    <div class="col-md-1"></div>
      <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <label for="validationCustom02" class="form-label mt-lg-2 mt-xxl-1 ms-xxl-1 ms-lg-2 ps-1">Password</label>
+  <div class="col-md-10 px-md-0 px-lg-2">
+    <label for="validationCustom02" class="form-label mt-lg-2 ms-md-2 mt-md-1 mt-xxl-1 ms-xxl-1 ms-lg-2 ps-1">Password</label>
     <input type="text" class="form-control" id="validationCustom02"  required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
-   
-<div class="col-1"></div>
-  <div class="col-11 p-0">
-    <div class="d-flex justify-content-end pe-lg-4 pe-xxl-3 me-lg-0 me-xxl-1 ">
-<button class="btn btn-success rounded-4 fw-medium ps-lg-4 ps-xxl-4" type="submit">
-  <i class="bi bi-person me-1"></i>
-  <span class="me-2">Entrar</span>
-</button>
-
-
-
-    </div>
- 
+   <div class="col-md-1"></div>
+<!-- Botón solo visible en pantallas md o menores -->
+ <div class="col-1 d-lg-none"></div>
+<div class="col-10 d-lg-none p-0">
+  <div class="d-flex justify-content-center px-3">
+    <button class="btn btn-success rounded-4 fw-medium w-100" type="submit">
+      <i class="bi bi-person "></i>
+      <span class="ms-1">Entrar</span>
+    </button>
   </div>
-   <div class="col-lg-1 col-xxl-0"></div>
+</div>
+<div class="col-1 d-lg-none"></div>
+<!-- Margen izquierdo solo en pantallas lg+ -->
+
+
+<!-- Botón solo visible en pantallas lg o mayores -->
+<div class="col-11 d-none d-lg-block p-0">
+  <div class="d-flex justify-content-end pe-lg-4 pe-xxl-3 me-lg-0 me-xxl-1">
+    <button class="btn btn-success rounded-4 fw-medium ps-lg-4 ps-xxl-4" type="submit">
+      <i class="bi bi-person me-1"></i>
+      <span class="me-2">Entrar</span>
+    </button>
+  </div>
+</div>
+<div class="col-1 d-none d-lg-block"></div>
+
+   
   </form>
 
 <div class="row px-lg-2 px-xl-2">
@@ -88,26 +102,40 @@
  <div class="col-2"></div>
 </div>
 
-<div class="row  px-xxl-4 px-lg-2 mx-xxl-0">
-<div class="col-lg-2 col-xxl-1"></div>
-<div class="col-lg-8 col-xxl-10 p-0">
-  
-
-<div class="d-grid gap-3">
-  <button class=" rounded-4 btn btn-info text-white fw-medium fs-7" type="button"><i class="bi bi-twitter ms-2 ps-1"></i>
-     <span class="">Entrar amb Twitter</span>
-</button>
-  <button class="btn btn-danger rounded-4 fw-medium text-white fw-medium fs-7" type="button"> <i class="fab fa-google  ms-2 "></i>
-    <span class="ms-2 ">Entrar amb Google</span>
-</button>
+<!-- ✅ Versión para móviles y tablets (solo visible en < lg) -->
+<div class="row px-md-5 d-lg-none mx-md-0">
+  <div class="col-12 p-0">
+    <div class="d-grid gap-3">
+      <button class="rounded-4 btn btn-info text-white fw-medium fs-7 w-100" type="button">
+        <i class="bi bi-twitter ms-2 ps-1"></i>
+        <span>Entrar amb Twitter</span>
+      </button>
+      <button class="btn btn-danger rounded-4 fw-medium text-white fs-7 w-100" type="button">
+        <i class="fab fa-google ms-2"></i>
+        <span class="ms-2">Entrar amb Google</span>
+      </button>
+    </div>
+  </div>
 </div>
 
-
+<!-- ✅ Versión para pantallas grandes (solo visible en lg+) -->
+<div class="row px-xxl-4 px-lg-2 d-none d-lg-flex mx-xxl-0">
+  <div class="col-lg-2 col-xxl-1"></div>
+  <div class="col-lg-8 col-xxl-10 p-0">
+    <div class="d-grid gap-3">
+      <button class="rounded-4 btn btn-info text-white fw-medium fs-7" type="button">
+        <i class="bi bi-twitter ms-2 ps-1"></i>
+        <span>Entrar amb Twitter</span>
+      </button>
+      <button class="btn btn-danger rounded-4 fw-medium text-white fs-7" type="button">
+        <i class="fab fa-google ms-2"></i>
+        <span class="ms-2">Entrar amb Google</span>
+      </button>
+    </div>
+  </div>
+  <div class="col-lg-2 col-xxl-1"></div>
 </div>
-<div class="col-lg-2 col-xxl-1"></div>
 
-
-</div>
 <div class="row px-2">
  <div class="col-2">
 

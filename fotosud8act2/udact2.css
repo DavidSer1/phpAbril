@@ -11,7 +11,14 @@ body {
 }
 
 .link-small {
-  font-size: 0.80rem; /* o ajusta el valor como prefieras */
+  font-size: 0.80rem; 
 }
 
+@media (max-width: 450px) {
+.paddingxs{
+padding-right: 73px; 
+padding-left: 73px;
+padding-top: 50px;
+}
+}
 
