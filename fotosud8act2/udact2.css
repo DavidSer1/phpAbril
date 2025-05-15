@@ -1,16 +1,16 @@
-body {
-  background-image: url('./img/background3.jpg');
-  background-size: cover;        /* para que cubra toda la pantalla */
-  background-position: center;   /* centrado */
-  background-repeat: no-repeat;  /* no se repita */
-  min-height: 100vh;             /* ocupa toda la altura de la ventana */
-}
 * {
   font-family: 'DM Sans', sans-serif;
-
 }
 
-.link-small {
+body {
+  background-image: url('./img/background3.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;  
+  min-height: 100vh;             
+}
+
+.registrarse {
   font-size: 0.80rem; 
 }
 
