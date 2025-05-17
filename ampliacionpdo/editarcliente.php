@@ -1,7 +1,7 @@
 <?php 
 
 include 'funciones.php'; 
-
+include 'redireccionlogin.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  

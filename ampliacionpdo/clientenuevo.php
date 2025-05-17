@@ -1,37 +1,42 @@
 <?php 
 include 'funciones.php'; 
-$conexion =  obtenerconexion();
+include 'redireccionlogin.php';
+$conexion = obtenerconexion();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$dni= $_POST['dni'];
-$nombre= $_POST['nombre'];
-$direccion= $_POST['direccion'];
-$localidad= $_POST['localidad'];
-$provincia= $_POST['provincia'];
-$telefono= $_POST['telefono'];
-$email= $_POST['email'];
+    $dni = $_POST['dni'];
+    $nombre = $_POST['nombre'];
+    $direccion = $_POST['direccion'];
+    $localidad = $_POST['localidad'];
+    $provincia = $_POST['provincia'];
+    $telefono = $_POST['telefono'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
+    $consultas = $conexion->prepare("INSERT INTO clientes (dni, nombre, direccion, localidad, provincia, telefono, email, password) 
+                                     VALUES (:dni, :nombre, :direccion, :localidad, :provincia, :telefono, :email, :password)");
 
-$consultas = $conexion->prepare("INSERT INTO clientes (dni, nombre, direccion, localidad, provincia, telefono, email) VALUES (:dni, :nombre, :direccion, :localidad, :provincia, :telefono, :email)");
+    $rows = $consultas->execute(array(
+        ":dni" => $dni,
+        ":nombre" => $nombre,
+        ":direccion" => $direccion,
+        ":localidad" => $localidad,
+        ":provincia" => $provincia,
+        ":telefono" => $telefono,
+        ":email" => $email,
+        ":password" => $password_hash
+    ));
 
-$rows = $consultas->execute(array(
-    ":dni" => $dni,
-    ":nombre" => $nombre,
-    ":direccion" => $direccion,
-    ":localidad" => $localidad,
-    ":provincia" => $provincia,
-    ":telefono" => $telefono,
-    ":email" => $email
-));
-
-if($rows == 1){
-    echo "Se ha insertado correctamente";
-    header("Location: index.php");
-}else{
-    echo "No se ha insertado correctamente";
+    if ($rows == 1) {
+        echo "Se ha insertado correctamente";
+        header("Location: index.php");
+    } else {
+        echo "No se ha insertado correctamente";
+    }
 }
-}
-
 ?>
+
   <form action="clientenuevo.php" method="POST">
     <div>
       <label for="dni">DNI:</label><br>
@@ -67,6 +72,10 @@ if($rows == 1){
       <label for="email">Email:</label><br>
       <input type="email" id="email" name="email" maxlength="30" required>
     </div>
+<div>
+  <label for="password">Contraseña:</label><br>
+  <input type="password" id="password" name="password" maxlength="255" required>
+</div>
 
     <div>
       <button type="submit">Enviar</button>

@@ -30,5 +30,29 @@ class Clienteclass {
 
         return $clientes;
     }
+        public static function obtenerPorDni($dni) {
+        include 'funciones.php';
+        $conexion = obtenerConexion();
+
+        $sql = "SELECT * FROM clientes WHERE dni = :dni LIMIT 1";
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute([':dni' => $dni]);
+        $fila = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($fila) {
+            $cliente = new Clienteclass();
+            $cliente->dni = $fila['dni'];
+            $cliente->nombre = $fila['nombre'];
+            $cliente->direccion = $fila['direccion'];
+            $cliente->localidad = $fila['localidad'];
+            $cliente->provincia = $fila['provincia'];
+            $cliente->telefono = $fila['telefono'];
+            $cliente->email = $fila['email'];
+
+            return $cliente;
+        }
+
+        return null;
+    }
 }
 ?>
