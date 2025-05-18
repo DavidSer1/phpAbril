@@ -2,7 +2,7 @@
 
 include 'funciones.php'; 
 include 'redireccionlogin.php';
-
+$sesionpermiso = $_SESSION['permisos'] ;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
 
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       ":email" => $email
   ));
 
-  
+
   if($rows > 0){
       header("Location: index.php?actualizado=ok");
   }
@@ -43,10 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 else{
 
-
-
-//añadir try catch
-
 $conexion =  obtenerconexion();
 
 
@@ -54,7 +50,7 @@ if (isset($_GET['dnis'])) {
     $dnis = $_GET['dnis'];
 
 }
-//y si no existe redirigir a index.php
+
 else {
     header("Location: index.php");
     exit();
@@ -66,17 +62,6 @@ $consulta2 = $conexion->prepare("SELECT * FROM clientes WHERE dni = :dnis");
 $consulta2->execute([':dnis' => $dnis]);
 
 $cliente = $consulta2->fetch(PDO::FETCH_OBJ);
-
-/*
-echo $clientes->nombre;
-
-foreach ($clientes as $cliente) {
-    echo "Nombre: " . $cliente->nombre . "<br>";
-    echo "DNI: " . $cliente->dni . "<br>";
-    echo "<hr>";
-}
-*/
-
 
 
 ?>
@@ -116,6 +101,17 @@ foreach ($clientes as $cliente) {
       <label for="email">Email:</label><br>
       <input type="email" id="email" name="email" maxlength="30" value="<?php echo $cliente->email; ?>">
     </div>
+
+   <div>
+
+  <label for="permiso">Permisos:</label><br>
+  <select id="permiso" name="permiso">
+    <option value="1" >1</option>
+     <option value="2" >2</option>
+         <option value="3" >3</option>
+  </select>
+</div>
+
 
     <div>
       <button type="submit">Enviar</button>

@@ -45,7 +45,7 @@ if (count($clientes) > 0): ?>
                     <td><?= $cliente->telefono ?></td>
                     <td><?= $cliente->email ?></td>
 
-                    <?php if ($permiso >= 2): ?>
+                    <?php if ($permiso > 3): ?>
                     <td>
                         <a href="borrarcliente.php?dni=<?= $cliente->dni ?>">
                             <button>Eliminar</button>
