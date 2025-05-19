@@ -2,15 +2,20 @@
 *{
  font-family: 'Hind Vadodara', sans-serif;
 }
-
+.fondoblau{
+  background-color: green;
+}
 
 .fondoheader{
   /*  background-color: #FAFAFA;*/
     background-color: red;
 }
 .perfil{
-  width:7.5rem;
+  width:7.1rem;
+}
+.secop{
+  font-size: 0.89rem;
 }
 .fondopatata{
-    background-color: #FAFAFA;
+    background-color: blue;
 }
