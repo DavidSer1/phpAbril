@@ -50,6 +50,31 @@
 .perfil{
   width:7.1rem;
 }
+.ssh1{
+width: 43%;
+}
+.ssh2{
+  width: 38%;
+}
+.ftp1{
+width: 55%;
+}
+.ftp2{
+  width: 45%;
+}
+
+.ntp1{
+ width: 18%;
+}
+.ntp2{
+   width: 12%;
+}
+.dns1{
+  width: 62%;
+}
+.dns2{
+    width: 38%;
+}
 @media (min-width: 1350px) {
 .perfil{
   width:8.7rem;
@@ -62,6 +87,45 @@
 @media(max-width: 950px){
   .perfil{
   width:4.7rem;
+}
+.tamanyo{
+  font-size: 2.3rem;
+}
+.tamanyo2{
+  font-size: 1.9rem;
+}
+.bola{
+  position: relative;
+   height:100vh; 
+   width:50vw;
+}
+.subir{
+  margin-top: -10rem;
+}
+.ssh1{
+width: 38%;
+}
+.ssh2{
+  width: 32%;
+}
+.ftp1{
+width: 55%;
+}
+.ftp2{
+  width: 45%;
+}
+
+.ntp1{
+ width: 16%;
+}
+.ntp2{
+   width: 11%;
+}
+.dns1{
+  width: 54%;
+}
+.dns2{
+    width: 33%;
 }
 }
 
