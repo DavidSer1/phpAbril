@@ -41,15 +41,27 @@
 }
 
 .fondoheader{
-  /*  background-color: #FAFAFA;*/
-    background-color: red;
+ background-color: #23282D;
+ 
+}
+.fondoblauweb{
+  background-color: #E8F1F9;
 }
 .perfil{
   width:7.1rem;
 }
-@media (min-width: 1250px) {
+@media (min-width: 1350px) {
 .perfil{
   width:8.7rem;
+}
+.subir{
+  margin-top: -10.6rem;
+}
+}
+
+@media(max-width: 950px){
+  .perfil{
+  width:4.7rem;
 }
 }
 
@@ -60,8 +72,10 @@
   font-size: 0.89rem;
 }
 .fondopatata{
-    background-color: blue;
+  
+    background-color: #E8EAED;
 }
 .fondonav{
-  background-color: orange;
+
+  background-color: #FFFFFF;
 }
