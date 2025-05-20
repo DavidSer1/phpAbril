@@ -47,6 +47,12 @@
 .perfil{
   width:7.1rem;
 }
+@media (min-width: 1250px) {
+.perfil{
+  width:8.7rem;
+}
+}
+
 .foot{
    font-size:0.77rem;
 }
