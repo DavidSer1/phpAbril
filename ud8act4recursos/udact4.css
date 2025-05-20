@@ -8,6 +8,16 @@
 .colorreloj{
   color: red;
 }
+.tamanyo{
+  font-size: 2.4rem;
+}
+ .no-left-rounded {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+.tamanyo2{
+  font-size: 2.2rem;
+}
 
 .fondoheader{
   /*  background-color: #FAFAFA;*/

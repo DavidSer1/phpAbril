@@ -21,7 +21,7 @@
         />
         <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-     
+     <script src="./udactact4.js" defer></script>
       </head>
 <body>
 
@@ -82,9 +82,9 @@
                </div>
               </div>
               
-            <div class="col-10 p-0 ps-2">
+            <div class="col-10 p-0 ">
 
-<div class="  ms-1 ">
+<div class=" ps-2 ms-1 ">
 <nav class="navbar navbar-expand-lg fondonav p-2">
   <div class="container-fluid py-2 pb-3">
     <a class="navbar-brand fs-4" href="#">Centre de control de seguretat activa</a>
@@ -125,17 +125,93 @@
   </div>
 </nav>
 </div>
-
-            </div>
 <div class="container-fluid">
+<div class="row p-0 px-3 pt-3 mt-2 mx-auto">
+<div class="col-4 p-0 ">
+<div class="ps-5  ">
+<div class="card">
+  <h5 class="card-header p-3 fs-4"> <i class="bi bi-shield-exclamation fs-4 me-2"></i>Nº atacs</h5>
+  <div class="card-body">
+    <div class="px-2"> 
+  <h3 class="  text-center ">
+  <span class="fw-medium tamanyo">5</span><span class="fw-light tamanyo2">/segon</span>
+</h3>
 
-  
+    </div>
+   <div class="pt-3">
+    <button class="w-100 px-2 py-2 rounded-3 fs-5 ">Veure detall</button>
+   </div>
+
+  </div>
 </div>
+</div>
+</div>
+<div class="col-4 p-0">
+  <div class="ps-3 pe-2"> 
+  <div class="card">
+ <h5 class="card-header p-3 fs-4"> <i class="bi bi-compass fs-4 me-2 "></i>Atacs per continent</h5>
+  <div class="card-body">
+  <canvas id="pie-chart" style="position: relative; height:100vh; width:50vw"></canvas>
+
+  </div>
+</div>
+</div>
+</div>
+<div class="col-4 p-0">
+  <div class="pe-4 me-1">
+  <div class="card">
+<h5 class="card-header p-3 fs-4"> <i class="bi bi-speedometer2 fs-4 me-2 "></i>% Activitat</h5>
+  <div class="card-body ">
+   <div class="d-flex align-items-center mb-2 mt-2">
+    <span class="me-2 text-lowercase" style="width: 40px;">ssh</span>
+    <div class="progress flex-grow-1" style="height: 25px;">
+      <div class="progress-bar bg-success no-left-rounded" style="width: 35%">35%</div>
+      <div class="progress-bar bg-info text-dark" style="width: 30%">30%</div>
+    </div>
+  </div>
+
+  <!-- FTP -->
+  <div class="d-flex align-items-center mb-2">
+    <span class="me-2 text-lowercase" style="width: 40px;">ftp</span>
+    <div class="progress flex-grow-1" style="height: 25px;">
+      <div class="progress-bar bg-warning text-dark no-left-rounded" style="width: 55%">55%</div>
+      <div class="progress-bar bg-danger" style="width: 45%">45%</div>
+    </div>
+  </div>
+
+  <!-- NTP -->
+  <div class="d-flex align-items-center mb-2">
+    <span class="me-2 text-lowercase" style="width: 40px;">ntp</span>
+    <div class="progress flex-grow-1" style="height: 25px;">
+      <div class="progress-bar bg-secondary no-left-rounded" style="width: 15%">15%</div>
+      <div class="progress-bar bg-primary" style="width: 10%">10%</div>
+    </div>
+  </div>
+
+  <!-- DNS -->
+  <div class="d-flex align-items-center mb-2">
+    <span class="me-2 text-lowercase" style="width: 40px;">dns</span>
+    <div class="progress flex-grow-1" style="height: 25px;">
+      <div class="progress-bar bg-danger no-left-rounded" style="width: 50%">50%</div>
+      <div class="progress-bar bg-primary" style="width: 30%">30%</div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</div>
+            </div>
+
 
 
         </div>
     </div>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
