@@ -26,8 +26,8 @@
 <body>
 
     <div class="container-fluid">
-        <div class="row align-items-start p-0">
-            <div class="col-2 p-0 ps-2">
+        <div class="row align-items-start p-0 ">
+            <div class="col-2 p-0 ps-2 ">
 
               <div class="ms-1"> 
                 <ul class="nav flex-column px-2 fondoblau pt-1 ">
@@ -103,14 +103,26 @@
       <div style="width: 1px; height: 24px; background-color: #ccc;"></div>
     </li>
    
-    <li class="nav-item pe-4 me-2 mt-2 position-relative">
-      <a class="nav-link p-0" href="#">
-        <i class="bi bi-bug-fill fs-4 text-secondary"></i>
-        <span class="position-absolute top-0 start-25 ms-2 translate-middle badge rounded-pill bg-danger">
-          99+
-        </span>
-      </a>
-    </li>
+  <!-- Ícono cuc con badge -->
+<li class="nav-item pe-4 me-2 mt-2 position-relative">
+  <a class="nav-link p-0" href="#" id="cucToggle">
+    <i class="bi bi-bug-fill fs-4 text-secondary" id="cuc"></i>
+    <span class="position-absolute top-0 start-25 ms-2 translate-middle badge rounded-pill bg-danger">
+      99+
+    </span>
+  </a>
+
+  <div id="cucCard" class="card position-absolute   top-100  mt-0 shadow d-none" style="width: 14rem; z-index: 999; left: -180px;">
+    <div class="card-header bg-primary text-white">
+      Notificació
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Bug detectat</h5>
+      <p class="card-text">Hi ha un nou error registrat en el sistema. Revisa la consola per a més detalls.</p>
+      <a href="#" class="btn btn-outline-primary btn-sm">Veure més</a>
+    </div>
+  </div>
+</li>
 
     <li class="nav-item pe-2 mt-2">
       <a class="nav-link p-0" href="#">
@@ -291,8 +303,33 @@
                   </div>
     
   </div>
+<div class="card-footer text-body-secondary textactualitzacio">
+  <div class="d-flex justify-content-between align-items-center">
+    <p class=" ">Mostrant 1 de 8</p> 
+    <nav aria-label="Page navigation example">
+      <ul class="pagination  ">
+        <li class="page-item disabled">
+          <a class="page-link">Anterior</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item mb-0">
+          <a class="page-link" href="#">Següent</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
 
+</div>
+
+</div>
+  </div>
+</div>
+<div class="row pt-1 mt-1">
+
+  <div class="col-12 fondonav ">
+    <div class="pt-3 "> 
+<p class="text-center foot ms-2">@202X Diseny Interficies Web</p>
 </div>
   </div>
 </div>

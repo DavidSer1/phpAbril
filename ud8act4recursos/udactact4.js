@@ -19,3 +19,17 @@ new Chart(document.getElementById("pie-chart"), {
   icon.addEventListener('click', () => {
     icon.classList.toggle('active');
   });
+   const cucToggle = document.getElementById('cucToggle');
+  const cucCard = document.getElementById('cucCard');
+
+  cucToggle.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita que se siga el enlace
+    cucCard.classList.toggle('d-none');
+  });
+
+  // Opcional: ocultar si se hace clic fuera
+  document.addEventListener('click', (e) => {
+    if (!cucToggle.contains(e.target) && !cucCard.contains(e.target)) {
+      cucCard.classList.add('d-none');
+    }
+  });
