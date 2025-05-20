@@ -15,3 +15,7 @@ new Chart(document.getElementById("pie-chart"), {
       }
     }
 });
+ const icon = document.getElementById('icon-detalls');
+  icon.addEventListener('click', () => {
+    icon.classList.toggle('active');
+  });

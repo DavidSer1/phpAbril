@@ -8,8 +8,26 @@
 .colorreloj{
   color: red;
 }
+.icona{
+  font-size: 5rem;
+}
+#icon-detalls {
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  #icon-detalls.active {
+    color: red !important;
+    font-size: 5.9rem !important;
+  }
+
 .atacs{
   font-size: 0.76rem;
+}
+.subir{
+  margin-top: -7rem;
+}
+.textactualitzacio{
+    font-size: 0.86rem;
 }
 .tamanyo{
   font-size: 2.4rem;
