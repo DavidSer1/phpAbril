@@ -32,13 +32,14 @@
 .tamanyo{
   font-size: 2.4rem;
 }
+.tamanyo2{
+  font-size: 2.2rem;
+}
  .no-left-rounded {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
   }
-.tamanyo2{
-  font-size: 2.2rem;
-}
+
 
 .fondoheader{
  background-color: #23282D;
@@ -127,6 +128,24 @@ width: 55%;
 .dns2{
     width: 33%;
 }
+}
+@media(max-width: 450px){
+   .perfil{
+  width:2.7rem;
+}
+.subir{
+  margin-top: 1.3rem;
+}
+.bajar{
+    margin-top: 1.3rem;
+}
+.tamanyo{
+  font-size: 1.8rem;
+}
+.tamanyo2{
+  font-size: 1.6rem;
+}
+
 }
 
 .foot{
