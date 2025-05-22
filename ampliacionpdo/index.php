@@ -26,7 +26,7 @@ if (count($clientes) > 0): ?>
                 <th>Provincia</th>
                 <th>Teléfono</th>
                 <th>Email</th>
-                <?php if ($permiso >= 2): ?>
+                <?php if ($permiso == 3): ?>
                     <th>Eliminar</th>
                       <?php endif; ?>
                     <th>Modificar</th>
