@@ -3,7 +3,7 @@
  font-family: 'Hind Vadodara', sans-serif;
 }
 .fondoblau{
-  background-color: green;
+  background-color: #FCFCFC;
 }
 .colorreloj{
   color: red;
@@ -20,12 +20,7 @@
     font-size: 5.9rem !important;
   }
 
-.atacs{
-  font-size: 0.76rem;
-}
-.subir{
-  margin-top: -7rem;
-}
+
 .textactualitzacio{
     font-size: 0.86rem;
 }
@@ -80,9 +75,7 @@ width: 55%;
 .perfil{
   width:7.9rem;
 }
-.subir{
-  margin-top: -10.6rem;
-}
+
 }
 
 @media(max-width: 950px){
@@ -100,9 +93,7 @@ width: 55%;
    height:100vh; 
    width:50vw;
 }
-.subir{
-  margin-top: -10rem;
-}
+
 .ssh1{
 width: 38%;
 }
@@ -133,9 +124,7 @@ width: 55%;
    .perfil{
   width:2.7rem;
 }
-.subir{
-  margin-top: 1.3rem;
-}
+
 .bajar{
     margin-top: 1.5rem;
  
@@ -163,4 +152,7 @@ width: 55%;
 .fondonav{
 
   background-color: #FFFFFF;
+}
+.atacs{
+  font-size: 0.76rem;
 }
