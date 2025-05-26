@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 17-05-2025 a las 09:14:41
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Servidor: localhost
+-- Tiempo de generación: 26-05-2025 a las 09:54:24
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,7 +35,6 @@ CREATE TABLE `clientes` (
   `provincia` varchar(30) NOT NULL,
   `telefono` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `contraseña` varchar(20) NOT NULL,
   `password` varchar(255) NOT NULL,
   `permisos` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -44,12 +43,21 @@ CREATE TABLE `clientes` (
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`dni`, `nombre`, `direccion`, `localidad`, `provincia`, `telefono`, `email`, `contraseña`, `password`, `permisos`) VALUES
-('12345678A', 'Ana García', 'Calle Mayor 12', 'Madrid', 'Madrid', '600123456', 'ana.garcia@email.com', '', '', 1),
-('23456789B', 'Luis Pérez', 'Av. del Sol 45', 'Valencia', 'Valencia', '611234567', 'luis.perez@email.com', '', '', 1),
-('34567890C', 'Marta López', 'C/ Luna 7', 'Sevilla', 'Sevilla', '622345678', 'marta.lopez@email.com', '', '', 1),
-('45678901D', 'Carlos Ruize', 'Camino Real 20', 'Granada', 'Andalucía', '633456789', 'carlos.ruiz@email.com', '', '', 1),
-('66666666R', 'pepe', 'Joan rois', 'Pego', 'Valencias', '999999999', 'pepe@gmail.com', '', '$2y$10$udULWuWZGHrS7KgGkmKBkeU3iE4EKvDE6Oa/XyxJwR/6kDSU6NgbC', 1);
+INSERT INTO `clientes` (`dni`, `nombre`, `direccion`, `localidad`, `provincia`, `telefono`, `email`, `password`, `permisos`) VALUES
+('00000000R', 'david', 'eeeeee', 'eeeeeee', 'eeee', '888888888', 'eee@gmail.com', '$2y$10$KpxEr47RfeYIx/1wiihKKOYbnTSvuBcVi.BxQrw4A4pygiUZnL0EW', 1),
+('11111111F', 'pepa', 'calle la pera', 'Pego', 'Alicante', '1122334455', 'pepe@pepe.com', '$2y$10$JHAxL1EIuIN2a3oiubt9VOAtCI5CrYLGAuaHQefUW4UdRxschAWZW', 3),
+('66666666R', 'pepe', 'Joan rois', 'Pego', 'Valencias', '999999999', 'pepe@gmail.com', '$2y$10$udULWuWZGHrS7KgGkmKBkeU3iE4EKvDE6Oa/XyxJwR/6kDSU6NgbC', 3),
+('77777777Z', 'Laura Martíneze', 'Plaza del Sol 8', 'Barcelona', 'Cataluña', '644555777', 'laura.martinez@email.com', '$2y$10$udULWuWZGHrS7KgGkmKBkeU3iE4EKvDE6Oa/XyxJwR/6kDSU6NgbC', 3);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`dni`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

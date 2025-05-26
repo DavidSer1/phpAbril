@@ -16,13 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
-    $permisos =  $_POST['permisos'];
 
-    $consultas = $conexion->prepare("INSERT INTO clientes (dni, nombre, direccion, localidad, provincia, telefono, email, password,permisos) 
-                                     VALUES (:dni, :nombre, :direccion, :localidad, :provincia, :telefono, :email, :password,:permisos)");
+    $consultas = $conexion->prepare("INSERT INTO clientes (dni, nombre, direccion, localidad, provincia, telefono, email, password) 
+                                     VALUES (:dni, :nombre, :direccion, :localidad, :provincia, :telefono, :email, :password)");
 
 
-  $rows = $consultas->execute(array(
+  $rows = $consultas->execute([
         ":dni" => $dni,
         ":nombre" => $nombre,
         ":direccion" => $direccion,
@@ -30,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ":provincia" => $provincia,
         ":telefono" => $telefono,
         ":email" => $email,
-        ":password" => $password_hash,
-        ":permisos" => $permisos
-    ));
+        ":password" => $password_hash
+    ]);
 
 
     if ($rows == 1) {
         echo "Se ha insertado correctamente";
         header("Location: index.php");
+        exit();
     } else {
         echo "No se ha insertado correctamente";
     }
@@ -82,15 +81,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div>
   <label for="password">Contraseña:</label><br>
   <input type="password" id="password" name="password" maxlength="255" required>
-</div>
-<div>
-
-<label for="permiso">Permisos:</label><br>
-<select id="permiso" name="permisos">
-  <option value="1" >Cliente</option>
-   <option value="2" >Empleado</option>
-       <option value="3" >Administrador</option>
-</select>
 </div>
 
     <div>

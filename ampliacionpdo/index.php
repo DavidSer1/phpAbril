@@ -11,8 +11,10 @@ if ($permiso == 1) {
 
     $clientes = Clienteclass::obtenerTodos();
 }
+if ($permiso == 3) {
+    echo "<a href='clientenuevo.php'><button>Crear</button></a>";
+} 
 
-echo "<a href='clientenuevo.php'><button>Crear</button></a>";
 echo "<a href='logout.php'><button>Cerrar sesión</button></a>";
 
 if (count($clientes) > 0): ?>
@@ -45,7 +47,7 @@ if (count($clientes) > 0): ?>
                     <td><?= $cliente->telefono ?></td>
                     <td><?= $cliente->email ?></td>
 
-                    <?php if ($permiso > 3): ?>
+                    <?php if ($permiso == 3): ?>
                     <td>
                         <a href="borrarcliente.php?dni=<?= $cliente->dni ?>">
                             <button>Eliminar</button>

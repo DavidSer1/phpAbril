@@ -3,6 +3,16 @@
 include 'funciones.php'; 
 include 'redireccionlogin.php';
 $sesionpermiso = $_SESSION['permisos'] ;
+function tipopermiso() {
+  if ($_SESSION['permisos'] == 1) {
+    return "Cliente";
+  } elseif ($_SESSION['permisos'] == 2) {
+    return "Empleado";
+  } elseif ($_SESSION['permisos'] == 3) {
+    return "Administrador";
+  }
+
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
 
@@ -13,13 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $provincia= $_POST['provincia'];
   $telefono= $_POST['telefono'];
   $email= $_POST['email'];
+  $permisos = $_POST['permisos'];
 
 
+
+ 
   $conexion = obtenerconexion();
   $consulta = $conexion->prepare("UPDATE clientes
                                   SET nombre = :nombre, direccion = :direccion,  
                                   localidad = :localidad,  provincia = :provincia, telefono = :telefono,   
-                                  email = :email  WHERE dni = :dni");
+                                  email = :email, permisos = :permisos WHERE dni = :dni");
 
   $rows = $consulta->execute(array(
       ":dni" => $dni,
@@ -28,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       ":localidad" => $localidad,
       ":provincia" => $provincia,
       ":telefono" => $telefono,
-      ":email" => $email
+      ":email" => $email,
+      ":permisos" => $permisos
   ));
 
 
@@ -102,16 +116,31 @@ $cliente = $consulta2->fetch(PDO::FETCH_OBJ);
       <input type="email" id="email" name="email" maxlength="30" value="<?php echo $cliente->email; ?>">
     </div>
 
-   <div>
+    
+    <?php if ($sesionpermiso < 2): ?>
+      <div>
+      <label for="permiso">Permisos:</label><br>
+ <input type="text" id="permiso" name="permisos" readonly value="<?php echo $cliente->permisos; ?>">
+<?php  tipopermiso();?>
+      </div>
+    <?php endif; ?>
 
-  <label for="permiso">Permisos:</label><br>
-  <select id="permiso" name="permiso">
-    <option value="1" >1</option>
-     <option value="2" >2</option>
-         <option value="3" >3</option>
-  </select>
-</div>
-
+    <?php if ($sesionpermiso == 3): ?>
+      <div>
+    <label for="permiso">Permisos:</label><br>
+    <select id="permiso" name="permisos">
+    <?php if ($sesionpermiso == 1): ?>
+      <option value="1" >Cliente</option>
+      <?php endif; ?>
+      <?php if ($sesionpermiso == 2): ?>
+      <option value="2" >Empleado</option>
+      <?php endif; ?>
+      <?php if ($sesionpermiso == 3): ?>
+          <option value="3" >Administrador</option>
+          <?php endif; ?>
+    </select>
+    </div>
+<?php endif; ?>
 
     <div>
       <button type="submit">Enviar</button>
