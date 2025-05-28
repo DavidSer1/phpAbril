@@ -37,7 +37,7 @@ if (count($clientes) > 0): ?>
         </thead>
         <tbody>
             <?php foreach ($clientes as $cliente): ?>
-                <?php if ($cliente): ?>
+              
                 <tr>
                     <td><?=$cliente->dni ?></td>
                     <td><?=$cliente->nombre ?></td>
@@ -61,7 +61,7 @@ if (count($clientes) > 0): ?>
                     </td>
                   
                 </tr>
-                <?php endif; ?>
+               
             <?php endforeach; ?>
         </tbody>
     </table>
