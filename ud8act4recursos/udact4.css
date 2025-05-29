@@ -19,7 +19,9 @@
     color: red !important;
     font-size: 5.9rem !important;
   }
-
+.fondo1{
+  background-color: #6C757D;
+}
 
 .textactualitzacio{
     font-size: 0.86rem;
