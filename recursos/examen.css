@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'Inter';
     src: url('./fonts/Inter.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+   
   }
   
   body {
@@ -12,9 +11,19 @@
   .tamanyvalencia{
     width: 15.8rem;
   }
+  .fondopasos{
+    background-color:#000000;
+  }
   .colorheader{
     color:  #ECB206;
   }
+  .tamanyonumeros{
+    font-size: 8.2rem;
+  }
   .fondoheader{
     background-color: #000000;
+ 
+  }
+  .tamanyofocu{
+        font-size: 1.6rem;
   }
