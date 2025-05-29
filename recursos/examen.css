@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .tamanyvalencia{
+    width: 15.8rem;
+  }
+  .colorheader{
+    color:  #ECB206;
+  }
+  .fondoheader{
+    background-color: #000000;
+  }
