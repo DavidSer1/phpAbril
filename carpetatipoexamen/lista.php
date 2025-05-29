@@ -28,8 +28,7 @@ echo "<a href='nouclient.php'>Crear</a>";
 <td> <?php echo $client->email ?></td>
 <td> <?php echo "<a href='editar.php?dni={$client->dni}'>Editar</a>"; ?>
 <?php echo "<a href='eliminar.php?dni={$client->dni}'>Eliminar</a>"; ?>
- 
-<?php echo "<a href='editar.php?dni=$client->dni '>Eliminar</a>"; ?> </td>
+  </td>
            
     </tr>
     <?php endforeach; ?>
