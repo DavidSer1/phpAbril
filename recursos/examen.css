@@ -42,4 +42,12 @@
   .logogva{
        width: 7.9rem;
   }
- 
+ @media(max-width: 550px){
+    .tamanyofocu{
+        font-size: 1.5rem;
+  }
+   .copy{
+    font-size: 0.9rem;
+  }
+
+ }
