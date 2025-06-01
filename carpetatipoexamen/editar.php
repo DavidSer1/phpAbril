@@ -36,7 +36,7 @@ if (isset($_GET['dni'])) {
     $dni = $_GET['dni'];
     $conexion = obtenerConexion();
     $consulta = $conexion->prepare("SELECT * FROM clientes WHERE dni = :dni");
-    $consulta->execute([':dni' => $dni]); 
+    $consulta->execute([':dni' => $dni]);  
     $cliente = $consulta->fetch(PDO::FETCH_OBJ); 
 
 }

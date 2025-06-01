@@ -51,7 +51,7 @@ $clientes = $consultale->fetch(PDO::FETCH_OBJ);
     <input type="text" id="dni" value="<?php echo $clientes->dni; ?>" name="dni" required><br>
     
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" value="<?php echo $clientes->dni; ?>" name="nombre" required><br>
+    <input type="text" id="nombre" value="<?php echo $clientes->nombre; ?>" name="nombre" required><br>
     
     <label for="direccion">Dirección:</label>
     <input type="text" id="direccion" name="direccion"><br>
