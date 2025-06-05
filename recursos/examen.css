@@ -3,13 +3,25 @@
     src: url('./fonts/Inter.ttf') format('truetype');
    
   }
+  .hoverespanya:hover{
+    background-color: #FFC107;
+  }
   
   body {
     font-family: 'Inter', sans-serif;
   }
-  
+  .xat{
+    width: 240px;
+
+  }
   .tamanyvalencia{
     width: 15.8rem;
+  }
+  .clear{
+    background-color: #FFC107;
+  }
+  .bartolo{
+    width:3rem;
   }
   .fondopasos{
     background-color:#000000;
@@ -25,7 +37,7 @@
  
   }
   .tamanyofocu{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
   }
   .actualiza{
         font-size: 0.9rem;
@@ -34,7 +46,7 @@
     background-color: #CED4DA;
   }
   .governespanya{
-      width: 15.2rem;
+      width: 15.1rem;
   }
   .copy{
     font-size: 0.9rem;
