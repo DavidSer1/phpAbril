@@ -31,11 +31,8 @@ class Clienteclass {
         return $clientes;
     }
         public static function obtenerPorDni($dni) {
-    
         $conexion = obtenerConexion();
-
-        $sql = "SELECT * FROM clientes WHERE dni = :dni LIMIT 1";
-        $stmt = $conexion->prepare($sql);
+        $stmt = $conexion->prepare("SELECT * FROM clientes WHERE dni = :dni LIMIT 1");
         $stmt->execute([':dni' => $dni]);
         $fila = $stmt->fetch(PDO::FETCH_ASSOC);
 
