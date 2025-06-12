@@ -63,3 +63,12 @@
   }
 
  }
+ .fixed-bottom {
+
+  pointer-events: none; /* El div ya no intercepta clics */
+}
+
+.fixed-bottom img {
+  pointer-events: auto; /* Pero la imagen sí los recibe */
+}
+
