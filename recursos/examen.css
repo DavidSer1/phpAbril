@@ -3,8 +3,23 @@
     src: url('./fonts/Inter.ttf') format('truetype');
    
   }
+  @font-face{
+    font-family: 'bootstrap-icons'; src: url("fonts/bootstrap-icons.woff2") format("woff2")};
+
   .hoverespanya:hover{
     background-color: #FFC107;
+  }
+
+.navbar-toggler[aria-expanded="true"] {
+  color: #ECB206;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='%23FFC107' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+  .colorheader:hover{
+    color:  #ECB206;
   }
   
   body {
@@ -65,10 +80,10 @@
  }
  .fixed-bottom {
 
-  pointer-events: none; /* El div ya no intercepta clics */
+  pointer-events: none; 
 }
 
 .fixed-bottom img {
-  pointer-events: auto; /* Pero la imagen sí los recibe */
+  pointer-events: auto;
 }
 
