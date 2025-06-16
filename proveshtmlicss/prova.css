@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'pepe';
+    src: url('./Inter.ttf') format('truetype');
+}
+body {
+    font-family: 'pepe', sans-serif;
+
+}
+.logovalencia{
+    width: 15rem;
+}
+.fondonegre{
+    background-color: #000;
+}
+.colorheader{
+    color: #F8BB06;
+}
+.tamanynumeros{
+    font-size: 8rem;
+}
+.tamanyrecopila{
+    font-size: 25px;
+}
+.tamanyactualitzat{
+    font-size: 14px;
+}
